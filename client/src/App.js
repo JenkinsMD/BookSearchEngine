@@ -48,7 +48,7 @@ function App() {
           </Switch>
         </>
       </Router>
-      </ApolloProvider>
+    </ApolloProvider>
   );
 }
 

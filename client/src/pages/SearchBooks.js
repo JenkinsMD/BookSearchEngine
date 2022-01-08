@@ -39,12 +39,12 @@ const SearchBooks = () => {
     try {
       //Reference from API
       // https://www.googleapis.com/books/v1/volumes?q=harry+potter
-        export const searchGoogleBooks = (query) => {
-          return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-        };
+        // export const searchGoogleBooks = (query) => {
+        //   return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+        // };
 
 
-      const response = await searchGoogleBooks(searchInput);
+      const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}`);
 
       if (!response.ok) {
         throw new Error('something went wrong!');
@@ -85,9 +85,9 @@ const SearchBooks = () => {
    
       });
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+      // if (!response.ok) {
+      //   throw new Error('something went wrong!');
+      // }
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
