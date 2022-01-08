@@ -41,7 +41,7 @@ const resolvers = {
           { _id: context.user.id },
           {
             $addToSet: {
-              savedBooks: [Book] ,
+              savedBooks: {bookId} ,
             },
           },
           {

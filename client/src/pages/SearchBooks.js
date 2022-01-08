@@ -37,6 +37,13 @@ const SearchBooks = () => {
     }
 
     try {
+      //Reference from API
+      // https://www.googleapis.com/books/v1/volumes?q=harry+potter
+        export const searchGoogleBooks = (query) => {
+          return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+        };
+
+
       const response = await searchGoogleBooks(searchInput);
 
       if (!response.ok) {
@@ -76,7 +83,6 @@ const SearchBooks = () => {
       const {data} = await saveBook({
         variables: {bookData: {...bookToSave}},
    
-
       });
 
       if (!response.ok) {
