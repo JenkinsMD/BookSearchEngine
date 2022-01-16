@@ -6,19 +6,24 @@ import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_ME } from '../utils/queries';
+import { GET_ME } from '../utils/queries';
 import { SAVE_BOOK, REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
   // const [userData, setUserData] = useState({});
 
   //MJ ADDED
-  const { loading, data } = useQuery(QUERY_ME);
+  const { loading, data } = useQuery(GET_ME);// not working???
+  console.log("---Data", data)
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+
   const userData = data?.me || {};
+  console.log("$$$$userData", userData)
+  
 
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
+  console.log("****userDataLength", userDataLength)
 
   // useEffect(() => {
   //   const getUserData = async () => {
@@ -73,6 +78,7 @@ const SavedBooks = () => {
 
   // if data isn't here yet, say so
   if (!userDataLength) {
+    // if (loading) {
     return <h2>LOADING...</h2>;
   }
 
