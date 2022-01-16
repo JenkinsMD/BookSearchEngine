@@ -11,7 +11,7 @@
 ## Description
 This page allows you to search for books using the Google book search API.  Once you find a book you want to save you can add it to your saved books list.  You can view all of the books you have saved and remove them from the list at any time.
 
-[Search books](./Assets/BookSearch1.JPG)
+![Search books](./Assets/BookSearch1.JPG)
 [Saved books](./Assets/BookSearch2.JPG)
 
 
