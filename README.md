@@ -1,7 +1,6 @@
 # Book Search Engine (Refactor)
 
 ## Links
-4. Deploy your application to Heroku with a MongoDB database using MongoDB Atlas. Use the [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) walkthrough for instructions.
 
 * https://mj-booksearch.herokuapp.com/
 
