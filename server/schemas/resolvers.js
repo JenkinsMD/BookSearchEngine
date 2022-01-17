@@ -54,7 +54,7 @@ const resolvers = {
       // console.log("bookData", bookData)
       if (context.user) {
         const user = await User.findOneAndUpdate(
-          { _id: context.user._id },
+          { _id: context.user._id },//added_ to id
           {
             $push: {
               savedBooks: bookData ,
@@ -65,7 +65,7 @@ const resolvers = {
             runValidators: true,
           }
         );
-        console.log("user", user)
+        // console.log("user", user)
         return user
       }
       throw new AuthenticationError('You need to be logged in!');
@@ -75,7 +75,7 @@ const resolvers = {
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
         const user = await User.findOneAndUpdate(
-          { _id: context.user._id },
+          { _id: context.user._id },//added_ to id
           {
             $pull: {
               savedBooks: {

@@ -3,6 +3,8 @@
 ## Links
 4. Deploy your application to Heroku with a MongoDB database using MongoDB Atlas. Use the [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) walkthrough for instructions.
 
+* https://mj-booksearch.herokuapp.com/
+
 * https://github.com/JenkinsMD/BookSearchEngine
 
 ## Technologies Used
@@ -11,7 +13,7 @@
 ## Description
 This page allows you to search for books using the Google book search API.  Once you find a book you want to save you can add it to your saved books list.  You can view all of the books you have saved and remove them from the list at any time.
 
-[Search books](./Assets/BookSearch1.JPG)
+![Search books](./Assets/BookSearch1.JPG)
 [Saved books](./Assets/BookSearch2.JPG)
 
 
