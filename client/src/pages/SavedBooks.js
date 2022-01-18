@@ -10,9 +10,10 @@ import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
-  
+  //Removed useEffect/useState
 
   //MJ ADDED
+  //Use graphQL
   const { loading, data } = useQuery(GET_ME);
  
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
@@ -63,7 +64,7 @@ const SavedBooks = () => {
         variables: {bookId}
       });
 
-     //removed api 
+     
       removeBookId(bookId);
     } catch (err) {
       console.error(err);

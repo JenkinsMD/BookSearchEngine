@@ -6,6 +6,8 @@ import { ADD_USER } from '../utils/mutations';
 // import { createUser } from '../utils/API';
 import Auth from '../utils/auth';
 
+//Majority provided in starter code
+
 const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
@@ -33,17 +35,13 @@ const SignupForm = () => {
     }
 
     try {
+      //removed restful api
       const { data } = await addUser({
         variables: {...userFormData}
         
       });
       console.log(data)
-      // if (!response.ok) {
-      //   throw new Error('something went wrong!');
-      // }
-
-      // const { token, user } = await response.json();
-      // console.log(user);
+      //fixed token
       Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);

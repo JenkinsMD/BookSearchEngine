@@ -17,6 +17,7 @@ const SearchBooks = () => {
   const [searchInput, setSearchInput] = useState('');
 
   //MJ ADDED
+  //Use graphQL
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
 
   // create state to hold saved bookId values
@@ -37,13 +38,8 @@ const SearchBooks = () => {
     }
 
     try {
-      //Reference from API
-      // https://www.googleapis.com/books/v1/volumes?q=harry+potter
-        // export const searchGoogleBooks = (query) => {
-        //   return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-        // };
-
-
+ 
+      //Moved fetch out of API
       const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}`);
 
       if (!response.ok) {
